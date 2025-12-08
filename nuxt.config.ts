@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   srcDir: 'src',
   compatibilityDate: '2025-07-15',
   css: ['~/assets/css/tailwind.css'],
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@nuxtjs/supabase'],
   i18n: {
     locales: [
       {
@@ -18,14 +18,28 @@ export default defineNuxtConfig({
         iso: 'ko-KR',
         name: '한국어',
         flag: '🇰🇷',
-        files: ['ko/common.json', 'ko/home.json', 'ko/dreamPath.json', 'ko/innoWorks.json', 'ko/contact.json'],
+        files: [
+          'ko/common.json',
+          'ko/home.json',
+          'ko/dreamPath.json',
+          'ko/innoWorks.json',
+          'ko/story.json',
+          'ko/contact.json',
+        ],
       },
       {
         code: 'en',
         iso: 'en-US',
         name: 'English',
         flag: '🇺🇸',
-        files: ['en/common.json', 'en/home.json', 'en/dreamPath.json', 'en/innoWorks.json', 'en/contact.json'],
+        files: [
+          'en/common.json',
+          'en/home.json',
+          'en/dreamPath.json',
+          'en/innoWorks.json',
+          'en/story.json',
+          'en/contact.json',
+        ],
       },
       // 향후 추가될 언어들 (번역 파일 생성 후 주석 해제)
       // {
@@ -61,6 +75,15 @@ export default defineNuxtConfig({
       fallbackLocale: 'ko',
     },
     vueI18n: '../i18n.config.ts',
+  },
+  supabase: {
+    redirect: false, // 자동 리다이렉트 비활성화
+    // 또는 특정 페이지만 인증 필요하도록 설정
+    // redirectOptions: {
+    //   login: '/admin',
+    //   callback: '/admin',
+    //   exclude: ['/', '/ko', '/en', '/ko/*', '/en/*'], // 공개 경로 제외
+    // },
   },
   devtools: { enabled: true },
   experimental: {
