@@ -85,9 +85,10 @@
           <div class="flex justify-center pt-4">
             <button
               type="submit"
-              class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer"
+              :disabled="isLoading"
+              class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {{ t('submit_inquiry') }}
+              {{ isLoading ? '전송 중...' : t('submit_inquiry') }}
             </button>
           </div>
         </form>
@@ -102,6 +103,7 @@ import { useI18n } from '#imports';
 
 const { t } = useI18n();
 
+// 2. 폼 데이터 상태 관리
 const form = ref({
   name: '',
   email: '',
@@ -109,9 +111,48 @@ const form = ref({
   message: '',
 });
 
-const submitForm = () => {
-  // Handle form submission logic here
-  console.log('Form submitted:', form.value);
-  alert('Form submitted! (Check console)');
+// 3. 로딩 상태 (중복 제출 방지용)
+const isLoading = ref(false);
+
+// 4. 제출 핸들러 함수
+const submitForm = async () => {
+  // 간단한 유효성 검사 (HTML required 속성으로도 1차 커버 가능)
+  if (!form.value.name || !form.value.email || !form.value.message) {
+    alert('이름, 이메일, 내용은 필수 입력 항목입니다.');
+    return;
+  }
+
+  try {
+    isLoading.value = true; // 로딩 시작
+
+    // Supabase 클라이언트 가져오기 (클라이언트 사이드에서만)
+    const client = useSupabaseClient();
+
+    // Supabase에 데이터 INSERT
+    const { error } = await client.from('inquiries').insert({
+      name: form.value.name,
+      email: form.value.email,
+      subject: form.value.subject,
+      message: form.value.message,
+    } as any);
+
+    if (error) throw error;
+
+    // 성공 처리
+    alert('문의가 성공적으로 접수되었습니다. 담당자가 확인 후 연락드리겠습니다.');
+
+    // 폼 초기화
+    form.value = {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    };
+  } catch (error) {
+    console.error('문의 전송 실패:', error);
+    alert('오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+  } finally {
+    isLoading.value = false; // 로딩 끝
+  }
 };
 </script>
