@@ -1,7 +1,13 @@
 {
   "contact_us": "문의하기",
+  "contact_description": "초등학생, 학부모님, 선생님을 위한 Friender에 대해\n더 궁금한 점이 있으신가요? 언제든지 문의해 주세요.",
+  "contact_friendly_message": "서비스 관련 문의나 비즈니스 제안을 남겨주시면, 담당자가 확인 후 친절하게 안내해 드리겠습니다.",
   "name": "이름",
-  "email": "이메일",
+  "name_placeholder": "이름을 입력하세요.",
+  "email_address": "이메일 주소",
+  "subject": "제목",
+  "subject_placeholder": "문의 제목을 입력하세요.",
   "message": "메시지",
-  "send": "보내기"
+  "message_placeholder": "문의하실 내용을 여기에 입력해주세요.",
+  "submit_inquiry": "문의 제출"
 }

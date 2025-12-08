@@ -1,7 +1,13 @@
 {
   "contact_us": "Contact Us",
+  "contact_description": "Do you have questions about Friender for elementary students, parents, and teachers?\nFeel free to contact us anytime.",
+  "contact_friendly_message": "Please leave any service inquiries or business proposals, and our team will review and provide friendly guidance.",
   "name": "Name",
-  "email": "Email",
+  "name_placeholder": "Enter your name.",
+  "email_address": "Email Address",
+  "subject": "Subject",
+  "subject_placeholder": "Enter the subject of your inquiry.",
   "message": "Message",
-  "send": "Send"
+  "message_placeholder": "Please enter the content of your inquiry here.",
+  "submit_inquiry": "Submit Inquiry"
 }
