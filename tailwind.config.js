@@ -10,6 +10,10 @@ export default {
           darkest: '#152017',
         },
       },
+      fontFamily: {
+        sans: ['LaundryGothic', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        laundry: ['LaundryGothic', 'sans-serif'],
+      },
     },
   },
   plugins: [],
