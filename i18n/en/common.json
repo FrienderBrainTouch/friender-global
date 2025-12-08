@@ -4,12 +4,15 @@
   "innoWorks": "Inno Works",
   "story": "AI Storybook",
   "contact": "Contact",
-  "ai_technology": "AI Technology",
-  "education": "Education",
-  "global_impact": "Global Impact",
-  "hashtag_social": "#SocialEnterprise",
-  "hashtag_venture": "#VentureCompany",
-  "hashtag_research": "#ResearchInstitute",
   "lang_en": "English",
-  "lang_ko": "Korean"
+  "lang_ko": "Korean",
+  "logo_tagline": "A better future we open together",
+  "logo_brand": "Friender",
+  "footer_company": "Company: Frender Co., Ltd. | CEO: Yoo Jae-chang",
+  "footer_contact": "Contact: 010-4263-2747",
+  "footer_business": "Business License: 671-87-01914 | Email:",
+  "footer_email": "sunwockd{'@'}naver.com",
+  "footer_address": "Address: 202-1508, 18, Bucheon-ro 198beon-gil, Bucheon-si, Gyeonggi-do",
+  "footer_notice": "Frender Co., Ltd. is a mail-order broker and is not a party to the mail-order sale. The seller is responsible for the product, product information, and transaction.",
+  "footer_copyright": "Copyright © 2024 Frender Co., Ltd. All rights reserved."
 }

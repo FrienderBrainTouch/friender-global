@@ -4,12 +4,15 @@
   "innoWorks": "Inno Works",
   "story": "AI Storybook",
   "contact": "문의",
-  "ai_technology": "AI 기술",
-  "education": "교육",
-  "global_impact": "글로벌 영향",
-  "hashtag_social": "#예비사회적기업",
-  "hashtag_venture": "#벤처기업",
-  "hashtag_research": "#기업부설 연구소",
   "lang_en": "영어",
-  "lang_ko": "한국어"
+  "lang_ko": "한국어",
+  "logo_tagline": "함께 여는 더 나은 미래",
+  "logo_brand": "프랜더",
+  "footer_company": "상호명: (주)프랜더 | 대표: 유재창",
+  "footer_contact": "연락처: 010-4263-2747",
+  "footer_business": "사업자등록번호: 671-87-01914 | 이메일:",
+  "footer_email": "sunwockd{'@'}naver.com",
+  "footer_address": "주소: 경기도 부천시 부천로 198번길 18, 202동 1508호",
+  "footer_notice": "(주)프랜더는 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매회원에게 있습니다.",
+  "footer_copyright": "Copyright © 2024 (주)프랜더 All rights reserved."
 }
