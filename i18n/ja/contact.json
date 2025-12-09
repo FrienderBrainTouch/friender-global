@@ -1,0 +1,13 @@
+{
+  "contact_us": "お問い合わせ",
+  "contact_description": "小学生、保護者、教師のためのフレンダーについて\nご質問がありますか？いつでもお問い合わせください。",
+  "contact_friendly_message": "サービスに関するお問い合わせやビジネス提案をお聞かせください。担当者が確認後、親切にご案内いたします。",
+  "name": "お名前",
+  "name_placeholder": "お名前を入力してください。",
+  "email_address": "メールアドレス",
+  "subject": "件名",
+  "subject_placeholder": "お問い合わせの件名を入力してください。",
+  "message": "メッセージ",
+  "message_placeholder": "お問い合わせ内容をここに入力してください。",
+  "submit_inquiry": "お問い合わせ送信"
+}
