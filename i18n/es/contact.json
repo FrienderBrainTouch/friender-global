@@ -1,0 +1,13 @@
+{
+  "contact_us": "Contáctanos",
+  "contact_description": "¿Tienes preguntas sobre Friender para estudiantes de primaria, padres y maestros?\nNo dudes en contactarnos en cualquier momento.",
+  "contact_friendly_message": "Por favor, deja cualquier consulta de servicio o propuesta comercial, y nuestro equipo revisará y proporcionará orientación amigable.",
+  "name": "Nombre",
+  "name_placeholder": "Ingresa tu nombre.",
+  "email_address": "Dirección de correo electrónico",
+  "subject": "Asunto",
+  "subject_placeholder": "Ingresa el asunto de tu consulta.",
+  "message": "Mensaje",
+  "message_placeholder": "Por favor, ingresa el contenido de tu consulta aquí.",
+  "submit_inquiry": "Enviar consulta"
+}

@@ -1,0 +1,13 @@
+{
+  "contact_us": "联系我们",
+  "contact_description": "您对面向小学生、家长和教师的Friender\n有疑问吗？随时联系我们。",
+  "contact_friendly_message": "请留下任何服务咨询或商业建议，我们的团队将审核并提供友好指导。",
+  "name": "姓名",
+  "name_placeholder": "请输入您的姓名。",
+  "email_address": "邮箱地址",
+  "subject": "主题",
+  "subject_placeholder": "请输入您的咨询主题。",
+  "message": "消息",
+  "message_placeholder": "请在此输入您的咨询内容。",
+  "submit_inquiry": "提交咨询"
+}
