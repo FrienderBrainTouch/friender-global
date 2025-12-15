@@ -33,7 +33,11 @@
         <!-- 오른쪽: 이미지 -->
         <div class="flex justify-center lg:justify-end">
           <div class="w-full h-96 bg-gray-100 rounded-2xl overflow-hidden">
-            <img src="/images/story_ai.png" alt="AI Storybook" class="w-full h-full object-cover" />
+            <img
+              src="/images/story_ai.webp"
+              alt="AI Storybook"
+              class="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -75,7 +79,7 @@
           <div class="flex justify-center order-2 lg:order-1">
             <div class="w-full rounded-2xl overflow-hidden">
               <img
-                src="/images/story_ai_4.png"
+                src="/images/story_ai_4.webp"
                 alt="AI Storybook for Parents and Teachers"
                 class="w-full h-auto object-cover"
               />
@@ -173,19 +177,19 @@ const storyAiUrl = computed(() => {
 const storyFeatures = [
   {
     icon: Lightbulb,
-    image: '/images/story_ai_1.png',
+    image: '/images/story_ai_1.webp',
     titleKey: 'story_feature1_title',
     descKey: 'story_feature1_desc',
   },
   {
     icon: BookOpen,
-    image: '/images/story_ai_2.png',
+    image: '/images/story_ai_2.webp',
     titleKey: 'story_feature2_title',
     descKey: 'story_feature2_desc',
   },
   {
     icon: Sparkles,
-    image: '/images/story_ai_3.png',
+    image: '/images/story_ai_3.webp',
     titleKey: 'story_feature3_title',
     descKey: 'story_feature3_desc',
   },
