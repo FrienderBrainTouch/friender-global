@@ -217,7 +217,10 @@ const sendMessage = async () => {
   scrollToBottom();
 
   try {
-    const response = await $fetch<{ message: string }>('https://api.dikidslab.com/chat', {
+    const config = useRuntimeConfig();
+    const apiUrl = config.public.chatbotApiUrl;
+
+    const response = await $fetch<{ message: string }>(apiUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

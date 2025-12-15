@@ -121,6 +121,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      chatbotApiUrl: process.env.CHATBOT_API_URL || '',
       chatbotDocIdHome: process.env.CHATBOT_DOC_ID_HOME || '',
       chatbotDocIdStory: process.env.CHATBOT_DOC_ID_STORY || '',
       chatbotDocIdDreamPath: process.env.CHATBOT_DOC_ID_DREAM_PATH || '',
