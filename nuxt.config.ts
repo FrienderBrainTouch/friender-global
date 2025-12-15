@@ -119,4 +119,12 @@ export default defineNuxtConfig({
       meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
     },
   },
+  runtimeConfig: {
+    public: {
+      chatbotDocIdHome: process.env.CHATBOT_DOC_ID_HOME || '',
+      chatbotDocIdStory: process.env.CHATBOT_DOC_ID_STORY || '',
+      chatbotDocIdDreamPath: process.env.CHATBOT_DOC_ID_DREAM_PATH || '',
+      chatbotDocIdInnoWorks: process.env.CHATBOT_DOC_ID_INNO_WORKS || '',
+    },
+  },
 });
