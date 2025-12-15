@@ -1,6 +1,6 @@
 {
   "dreamPath_hero_title": "Una emocionante aventura para encontrar tus sueños, Dream Path",
-  "dreamPath_hero_subtitle": "¡Descubre las posibilidades ocultas dentro de ti con amigos de IA y crea el futuro que solo has imaginado!",
+  "dreamPath_hero_subtitle": "Descubre tus intereses y encuentra tus sueños con Friender Dream Path. Sigue los cursos de aprendizaje recomendados por IA, experimenta carreras futuras y dibuja tus propios sueños hablando con mentores expertos!",
   "dreamPath_what_is_my_dream_title": "¿Cuál es mi sueño?",
   "dreamPath_what_is_my_dream_desc": "Dream Path te ayuda a descubrir tus intereses a través de varias actividades.",
   "dreamPath_career_experience": "Experiencia Profesional con IA",
@@ -15,5 +15,13 @@
   "dreamPath_friends_desc": "Forma equipos, comparte ideas y presenta proyectos para construir confianza.",
   "dreamPath_for_parents_title": "Para Padres y Maestros",
   "dreamPath_for_parents_desc": "Dream Path es un programa educativo que ayuda a los niños a descubrir talentos, resolver problemas creativamente y utilizar la IA en un ambiente seguro.",
+  "dreamPath_for_parents_feature1_title": "Exploración con Mentor de IA",
+  "dreamPath_for_parents_feature1_desc": "El mentor de IA es una guía amable que ayuda a resolver problemas y generar nuevas ideas.",
+  "dreamPath_for_parents_feature2_title": "Creando Sueños con Amigos",
+  "dreamPath_for_parents_feature2_desc": "Forma equipos, comparte ideas y presenta proyectos para construir confianza.",
+  "dreamPath_hero_button": "Comienza a encontrar tu sueño ahora",
+  "dreamPath_cta_title": "¿Listo para encontrar tu propio sueño?",
+  "dreamPath_cta_desc": "¡Descubre las posibilidades ocultas dentro de ti con amigos de IA y crea el futuro que solo has imaginado!",
+  "dreamPath_cta_button": "Comenzar Dream Path",
   "dreamPath_learn_more": "Saber más"
 }

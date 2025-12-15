@@ -1,7 +1,8 @@
 {
   "story_hero_title": "AI朋友讲述的魔法故事世界！\n(AI Storybook)",
-  "story_hero_desc": "与Friender AI Storybook一起，将想象的世界变成精彩的故事。我可以成为主角，创造故事，并完成可爱的图画书！",
-  "story_create_button": "现在就去创造故事吧！",
+  "story_hero_subtitle": "与Friender AI Storybook一起，将想象的世界变成精彩的故事。我可以成为主角，创造故事，并完成可爱的图画书！",
+  "story_hero_button": "现在就去创造故事吧",
+  "story_create_button": "现在就去创造故事吧",
   "story_feature1_title": "释放想象力的我的故事",
   "story_feature1_desc": "告诉AI您的有趣想法，比如「会飞的海豚」或「制作饼干的恐龙」。您的AI朋友会将您的想法变成精彩的故事！",
   "story_feature2_title": "AI朋友讲述的特别故事",

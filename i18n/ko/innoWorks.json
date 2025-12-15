@@ -1,6 +1,6 @@
 {
   "innoWorks_hero_title": "반짝이는 아이디어를 현실로!",
-  "innoWorks_hero_subtitle": "나만의 이노워크스 (Inno Works)",
+  "innoWorks_hero_subtitle": "프렌더 Inno Works와 함께 상상하는 모든 것을 현실로 만들어 봐요. 코딩, 그림 그리기, 음악 만들기 등 나만의 작품을 만들고, 친구들과 함께 발표하며 창의력을 키워요!",
   "innoWorks_hero_desc": "AI와 함께 상상하고, 만들고, 발표하며 창의력을 쑥쑥 키워요!",
   "innoWorks_ai_tools_title": "상상력을 키우는 AI 도구",
   "innoWorks_ai_tools_desc": "AI는 아이디어를 그림과 글로 바꿔주는 도구입니다. 코딩 지식 없이도 상상하는 세상을 만들어낼 수 있어요.",
@@ -13,5 +13,9 @@
   "innoWorks_creative_thinking": "창의적 사고력",
   "innoWorks_problem_solving_skills": "문제 해결 능력",
   "innoWorks_digital_literacy": "디지털 리터러시",
+  "innoWorks_hero_button": "지금 창작 시작하기",
+  "innoWorks_cta_title": "나만의 작품을 만들 준비가 되었나요?",
+  "innoWorks_cta_desc": "AI와 함께 상상하고, 만들고, 발표하며 창의력을 쑥쑥 키워요!",
+  "innoWorks_cta_button": "Inno Works 시작하기",
   "innoWorks_start_creating": "창작 시작하기"
 }

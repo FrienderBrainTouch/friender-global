@@ -1,6 +1,6 @@
 {
   "dreamPath_hero_title": "夢を探すワクワクする冒険、Dream Path",
-  "dreamPath_hero_subtitle": "AIフレンドと一緒にあなたの中に隠された可能性を発見し、想像だけしていた未来を直接作ってみましょう！",
+  "dreamPath_hero_subtitle": "フレンダーDream Pathと一緒にあなたの興味を発見し、夢を探しましょう。AIが推奨する学習コースに従い、未来の職業を体験し、専門メンターと話しながらあなただけの夢を描いてみましょう！",
   "dreamPath_what_is_my_dream_title": "私の夢は何？",
   "dreamPath_what_is_my_dream_desc": "Dream Pathは様々な活動を通じてあなたの興味を発見できるように助けます。",
   "dreamPath_career_experience": "AI職業体験",
@@ -15,5 +15,13 @@
   "dreamPath_friends_desc": "チームを構成し、アイデアを共有し、プロジェクトを発表しながら自信を育てましょう。",
   "dreamPath_for_parents_title": "保護者と教師のために",
   "dreamPath_for_parents_desc": "Dream Pathは子供たちが才能を発見し、問題を創造的に解決し、安全な環境でAIを活用した教育プログラムです。",
+  "dreamPath_for_parents_feature1_title": "AIメンターとの探険",
+  "dreamPath_for_parents_feature1_desc": "AIメンターは親切なガイドです。問題を解決し、新しいアイデアを作り出すことを助けてくれます。",
+  "dreamPath_for_parents_feature2_title": "友達と一緒に夢を作る",
+  "dreamPath_for_parents_feature2_desc": "チームを構成し、アイデアを共有し、プロジェクトを発表しながら自信を育てましょう。",
+  "dreamPath_hero_button": "今すぐ夢探しを始めましょう",
+  "dreamPath_cta_title": "あなただけの夢を見つける準備はできましたか？",
+  "dreamPath_cta_desc": "AIフレンドと一緒にあなたの中に隠された可能性を発見し、想像だけしていた未来を直接作ってみましょう！",
+  "dreamPath_cta_button": "Dream Pathを始める",
   "dreamPath_learn_more": "もっと見る"
 }

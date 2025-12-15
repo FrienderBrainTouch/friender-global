@@ -1,6 +1,6 @@
 {
   "innoWorks_hero_title": "キラキラしたアイデアを現実に！",
-  "innoWorks_hero_subtitle": "私だけのイノワークス (Inno Works)",
+  "innoWorks_hero_subtitle": "フレンダーイノワークスと一緒に想像するすべてを現実にしましょう。コーディング、絵を描く、音楽を作るなど、あなただけの作品を作り、友達と一緒に発表しながら創造力を育てましょう！",
   "innoWorks_hero_desc": "AIと一緒に想像し、作り、発表しながら創造力をぐんぐん育てましょう！",
   "innoWorks_ai_tools_title": "想像力を育てるAIツール",
   "innoWorks_ai_tools_desc": "AIはアイデアを絵と文字に変えてくれるツールです。コーディング知識がなくても想像する世界を作り出すことができます。",
@@ -13,5 +13,9 @@
   "innoWorks_creative_thinking": "創造的思考力",
   "innoWorks_problem_solving_skills": "問題解決能力",
   "innoWorks_digital_literacy": "デジタルリテラシー",
+  "innoWorks_hero_button": "今すぐ創作を始めましょう",
+  "innoWorks_cta_title": "あなただけの作品を作る準備はできましたか？",
+  "innoWorks_cta_desc": "AIと一緒に想像し、作り、発表しながら創造力をぐんぐん育てましょう！",
+  "innoWorks_cta_button": "イノワークスを始める",
   "innoWorks_start_creating": "創作を始める"
 }
