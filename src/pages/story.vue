@@ -5,10 +5,12 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- 왼쪽: 텍스트 -->
         <div>
-          <h1 class="text-4xl lg:text-5xl font-bold text-friender-darkest mb-6 leading-relaxed">
+          <h1
+            class="text-4xl lg:text-5xl font-bold text-friender-darkest mb-6 leading-relaxed whitespace-pre-line"
+          >
             {{ t('story_hero_title') }}
           </h1>
-          <p class="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
+          <p class="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed whitespace-pre-line">
             {{ t('story_hero_subtitle') }}
           </p>
           <NuxtLink
