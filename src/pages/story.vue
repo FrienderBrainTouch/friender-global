@@ -7,7 +7,7 @@
         <div>
           <h1 class="text-4xl lg:text-5xl font-bold text-friender-darkest mb-6 leading-relaxed">
             {{ t('story_hero_title') }}
-      </h1>
+          </h1>
           <p class="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
             {{ t('story_hero_subtitle') }}
           </p>
@@ -21,9 +21,8 @@
 
         <!-- 오른쪽: 이미지 -->
         <div class="flex justify-center lg:justify-end">
-          <div class="w-full h-96 bg-gray-100 rounded-2xl flex items-center justify-center">
-            <!-- 이미지 영역 - 실제 이미지로 교체 필요 -->
-            <BookOpen :size="120" class="text-friender-primary" stroke-width="1.5" />
+          <div class="w-full h-96 bg-gray-100 rounded-2xl overflow-hidden">
+            <img src="/images/story_ai.png" alt="AI Storybook" class="w-full h-full object-cover" />
           </div>
         </div>
       </div>
@@ -34,8 +33,12 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- 피처 1: 상상력을 펼치는 나만의 이야기 -->
-          <div class="bg-white p-8 text-center border border-gray-100 transition-all duration-300 hover:border-friender-primary/30 rounded-2xl">
-            <div class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div
+            class="bg-white p-8 text-center border border-gray-100 transition-all duration-300 hover:border-friender-primary/30 rounded-2xl"
+          >
+            <div
+              class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
               <Lightbulb :size="48" class="text-friender-primary" stroke-width="1.5" />
             </div>
             <h3 class="text-xl font-bold text-friender-darkest mb-4">
@@ -47,8 +50,12 @@
           </div>
 
           <!-- 피처 2: AI 친구가 들려주는 특별한 이야기 -->
-          <div class="bg-white p-8 text-center border border-gray-100 transition-all duration-300 hover:border-friender-primary/30 rounded-2xl">
-            <div class="w-24 h-24 bg-beige-50 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div
+            class="bg-white p-8 text-center border border-gray-100 transition-all duration-300 hover:border-friender-primary/30 rounded-2xl"
+          >
+            <div
+              class="w-24 h-24 bg-beige-50 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
               <div class="w-16 h-16 bg-gray-200 rounded-full"></div>
             </div>
             <h3 class="text-xl font-bold text-friender-darkest mb-4">
@@ -60,9 +67,15 @@
           </div>
 
           <!-- 피처 3: 멋진 그림책으로 완성! -->
-          <div class="bg-white p-8 text-center border border-gray-100 transition-all duration-300 hover:border-friender-primary/30 rounded-2xl">
-            <div class="w-24 h-24 bg-pink-50 rounded-full flex items-center justify-center mx-auto mb-6">
-              <div class="w-16 h-16 bg-gradient-to-br from-pink-400 via-orange-400 to-blue-400 rounded"></div>
+          <div
+            class="bg-white p-8 text-center border border-gray-100 transition-all duration-300 hover:border-friender-primary/30 rounded-2xl"
+          >
+            <div
+              class="w-24 h-24 bg-pink-50 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-pink-400 via-orange-400 to-blue-400 rounded"
+              ></div>
             </div>
             <h3 class="text-xl font-bold text-friender-darkest mb-4">
               {{ t('story_feature3_title') }}
@@ -95,7 +108,9 @@
             <div class="space-y-6">
               <!-- 피처 1 -->
               <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-friender-primary rounded-full flex items-center justify-center flex-shrink-0">
+                <div
+                  class="w-12 h-12 bg-friender-primary rounded-full flex items-center justify-center flex-shrink-0"
+                >
                   <Sparkles :size="24" class="text-white" stroke-width="2" />
                 </div>
                 <div>
@@ -110,7 +125,9 @@
 
               <!-- 피처 2 -->
               <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-friender-primary rounded-full flex items-center justify-center flex-shrink-0">
+                <div
+                  class="w-12 h-12 bg-friender-primary rounded-full flex items-center justify-center flex-shrink-0"
+                >
                   <BookOpen :size="24" class="text-white" stroke-width="2" />
                 </div>
                 <div>
