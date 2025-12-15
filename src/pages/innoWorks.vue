@@ -136,12 +136,14 @@
         <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
           {{ t('innoWorks_cta_desc') || t('story_cta_desc') }}
         </p>
-        <NuxtLink
-          :to="localePath('/contact')"
+        <a
+          :href="innoWorksUrl"
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer"
         >
           {{ t('innoWorks_cta_button') || t('story_cta_button') }}
-        </NuxtLink>
+        </a>
       </div>
     </div>
   </div>

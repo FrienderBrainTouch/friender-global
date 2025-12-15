@@ -43,56 +43,24 @@
     <div class="bg-white py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- 피처 1: 상상력을 펼치는 나만의 이야기 -->
           <div
+            v-for="(feature, index) in storyFeatures"
+            :key="index"
             class="bg-white p-8 text-center border border-gray-100 transition-all duration-300 hover:border-friender-primary/30 rounded-2xl"
           >
-            <div
-              class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <Lightbulb :size="48" class="text-friender-primary" stroke-width="1.5" />
+            <div class="w-full h-48 bg-gray-100 rounded-2xl overflow-hidden mb-6">
+              <img
+                v-if="feature.image"
+                :src="feature.image"
+                :alt="t(feature.titleKey)"
+                class="w-full h-full object-cover"
+              />
             </div>
             <h3 class="text-xl font-bold text-friender-darkest mb-4">
-              {{ t('story_feature1_title') }}
+              {{ t(feature.titleKey) }}
             </h3>
             <p class="text-base text-gray-600 leading-relaxed">
-              {{ t('story_feature1_desc') }}
-            </p>
-          </div>
-
-          <!-- 피처 2: AI 친구가 들려주는 특별한 이야기 -->
-          <div
-            class="bg-white p-8 text-center border border-gray-100 transition-all duration-300 hover:border-friender-primary/30 rounded-2xl"
-          >
-            <div
-              class="w-24 h-24 bg-beige-50 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <div class="w-16 h-16 bg-gray-200 rounded-full"></div>
-            </div>
-            <h3 class="text-xl font-bold text-friender-darkest mb-4">
-              {{ t('story_feature2_title') }}
-            </h3>
-            <p class="text-base text-gray-600 leading-relaxed">
-              {{ t('story_feature2_desc') }}
-            </p>
-          </div>
-
-          <!-- 피처 3: 멋진 그림책으로 완성! -->
-          <div
-            class="bg-white p-8 text-center border border-gray-100 transition-all duration-300 hover:border-friender-primary/30 rounded-2xl"
-          >
-            <div
-              class="w-24 h-24 bg-pink-50 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <div
-                class="w-16 h-16 bg-gradient-to-br from-pink-400 via-orange-400 to-blue-400 rounded"
-              ></div>
-            </div>
-            <h3 class="text-xl font-bold text-friender-darkest mb-4">
-              {{ t('story_feature3_title') }}
-            </h3>
-            <p class="text-base text-gray-600 leading-relaxed">
-              {{ t('story_feature3_desc') }}
+              {{ t(feature.descKey) }}
             </p>
           </div>
         </div>
@@ -104,10 +72,13 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- 왼쪽: 이미지 -->
-          <div class="flex justify-center lg:justify-start order-2 lg:order-1">
-            <div class="w-64 h-64 bg-beige-50 rounded-2xl flex items-center justify-center">
-              <!-- 이미지 영역 - 실제 이미지로 교체 필요 -->
-              <div class="w-48 h-48 bg-gray-200 rounded-full"></div>
+          <div class="flex justify-center order-2 lg:order-1">
+            <div class="w-full rounded-2xl overflow-hidden">
+              <img
+                src="/images/story_ai_4.png"
+                alt="AI Storybook for Parents and Teachers"
+                class="w-full h-auto object-cover"
+              />
             </div>
           </div>
 
@@ -165,12 +136,14 @@
         <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
           {{ t('story_cta_desc') }}
         </p>
-        <NuxtLink
-          :to="localePath('/contact')"
+        <a
+          :href="storyAiUrl"
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer"
         >
           {{ t('story_cta_button') }}
-        </NuxtLink>
+        </a>
       </div>
     </div>
   </div>
@@ -196,4 +169,25 @@ const storyAiUrl = computed(() => {
   const mappedLocale = localeMap[locale.value] || 'ko';
   return `https://multi.storyai.kr/${mappedLocale}/`;
 });
+
+const storyFeatures = [
+  {
+    icon: Lightbulb,
+    image: '/images/story_ai_1.png',
+    titleKey: 'story_feature1_title',
+    descKey: 'story_feature1_desc',
+  },
+  {
+    icon: BookOpen,
+    image: '/images/story_ai_2.png',
+    titleKey: 'story_feature2_title',
+    descKey: 'story_feature2_desc',
+  },
+  {
+    icon: Sparkles,
+    image: '/images/story_ai_3.png',
+    titleKey: 'story_feature3_title',
+    descKey: 'story_feature3_desc',
+  },
+];
 </script>
