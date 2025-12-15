@@ -74,12 +74,12 @@
             <p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">
               {{ t(service.descKey) }}
             </p>
-            <NuxtLink
-              :to="localePath(service.to)"
+            <button
+              @click.prevent="openServiceChatbot(service.chatbotType)"
               class="inline-flex items-center justify-center px-6 py-3 border border-friender-primary text-base font-medium text-friender-primary hover:bg-friender-primary hover:text-white transition-all duration-300 mt-auto"
             >
               {{ t('cta_button') }}
-            </NuxtLink>
+            </button>
           </div>
         </div>
       </div>
@@ -142,9 +142,11 @@ import {
   GraduationCap,
   Sprout,
 } from 'lucide-vue-next';
+import { useChatbot, type ChatbotType } from '~/composables/useChatbot';
 
 const { t } = useI18n();
 const localePath = useLocalePath();
+const { openChatbot } = useChatbot();
 
 // 서비스 쇼케이스 - 이미지와 아이콘 사용
 const serviceShowcase = [
@@ -154,6 +156,7 @@ const serviceShowcase = [
     titleKey: 'dreamPath_title',
     descKey: 'dreamPath_desc',
     to: '/dreamPath',
+    chatbotType: 'dreamPath' as ChatbotType,
   },
   {
     icon: Target,
@@ -161,6 +164,7 @@ const serviceShowcase = [
     titleKey: 'innoWorks_title',
     descKey: 'innoWorks_desc',
     to: '/innoWorks',
+    chatbotType: 'innoWorks' as ChatbotType,
   },
   {
     icon: BookOpen,
@@ -168,8 +172,14 @@ const serviceShowcase = [
     titleKey: 'story_title',
     descKey: 'story_desc',
     to: '/story',
+    chatbotType: 'story' as ChatbotType,
   },
 ];
+
+// 서비스별 챗봇 열기
+const openServiceChatbot = (chatbotType: ChatbotType) => {
+  openChatbot(chatbotType);
+};
 
 // 프로그램 섹션으로 스크롤
 const scrollToPrograms = () => {
