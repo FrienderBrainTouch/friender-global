@@ -1,6 +1,6 @@
 {
-  "innoWorks_hero_title": "将闪亮的想法变为现实！",
-  "innoWorks_hero_subtitle": "我的Inno Works",
+  "innoWorks_hero_title": "将闪亮的想法变为现实，\nInno Works",
+  "innoWorks_hero_subtitle": "与Friender Inno Works一起，将您想象的一切变为现实。\n创作您自己的作品，如编程、绘画和音乐，与朋友一起展示，提升创造力！",
   "innoWorks_hero_desc": "与AI一起想象、创造和展示，提升创造力！",
   "innoWorks_ai_tools_title": "培养想象力的AI工具",
   "innoWorks_ai_tools_desc": "AI是将想法转化为图画和文字的工具。即使没有编程知识，您也可以创造想象的世界。",
@@ -13,6 +13,10 @@
   "innoWorks_creative_thinking": "创造性思维",
   "innoWorks_problem_solving_skills": "解决问题的能力",
   "innoWorks_digital_literacy": "数字素养",
+  "innoWorks_hero_button": "开始InnoWorks",
+  "innoWorks_catalog_button": "查看电子目录",
+  "innoWorks_cta_title": "准备好创作自己的作品了吗？",
+  "innoWorks_cta_desc": "与AI一起想象、创造和展示，提升创造力！",
+  "innoWorks_cta_button": "开始Inno Works",
   "innoWorks_start_creating": "开始创作"
 }
-

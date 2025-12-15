@@ -1,6 +1,6 @@
 {
-  "innoWorks_hero_title": "¡Ideas brillantes convertidas en realidad!",
-  "innoWorks_hero_subtitle": "Mi propio Inno Works",
+  "innoWorks_hero_title": "Ideas brillantes convertidas en realidad,\nInno Works",
+  "innoWorks_hero_subtitle": "Crea todo lo que imaginas con Friender Inno Works.\nHaz tus propias obras como programación, dibujo y música, e impulsa tu creatividad presentándolas con amigos!",
   "innoWorks_hero_desc": "¡Imagina, crea y presenta con IA para impulsar la creatividad!",
   "innoWorks_ai_tools_title": "Herramientas de IA para Fomentar la Imaginación",
   "innoWorks_ai_tools_desc": "La IA es una herramienta que convierte ideas en dibujos y texto. Puedes crear mundos imaginativos sin conocimiento de programación.",
@@ -13,5 +13,10 @@
   "innoWorks_creative_thinking": "Pensamiento Creativo",
   "innoWorks_problem_solving_skills": "Habilidades de Resolución de Problemas",
   "innoWorks_digital_literacy": "Alfabetización Digital",
+  "innoWorks_hero_button": "Comenzar InnoWorks",
+  "innoWorks_catalog_button": "Ver catálogo electrónico",
+  "innoWorks_cta_title": "¿Listo para crear tu propio trabajo?",
+  "innoWorks_cta_desc": "¡Imagina, crea y presenta con IA para impulsar la creatividad!",
+  "innoWorks_cta_button": "Comenzar Inno Works",
   "innoWorks_start_creating": "Comenzar a Crear"
 }

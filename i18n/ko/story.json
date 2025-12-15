@@ -1,7 +1,8 @@
 {
-  "story_hero_title": "AI 친구가 들려주는 마법 같은 이야기 세상! (AI Storybook)",
-  "story_hero_subtitle": "프렌더 AI 스토리북과 함께 상상 속 세계를 멋진 이야기로 만들어 봐요. 내가 주인공이 되어 이야기를 만들고, 귀여운 그림책도 완성할 수 있어요!",
-  "story_hero_button": "지금 이야기 만들러 가기!",
+  "story_hero_title": "AI 친구가 들려주는 마법 같은 이야기 세상,\nAI Storybook",
+  "story_hero_subtitle": "프랜더 AI 스토리북과 함께 상상 속 세계를 멋진 이야기로 만들어 봐요.\n내가 주인공이 되어 이야기를 만들고, 귀여운 그림책도 완성할 수 있어요!",
+  "story_hero_button": "Storybook AI 시작하기",
+  "story_catalog_button": "E-카탈로그 보기",
   "story_feature1_title": "상상력을 펼치는 나만의 이야기",
   "story_feature1_desc": "\"하늘을 나는 돌고래\"나 \"쿠키를 만드는 공룡\"처럼 재미있는 생각을 AI에게 알려주세요. AI 친구가 내 생각을 멋진 이야기로 만들어 줄 거예요!",
   "story_feature2_title": "AI 친구가 들려주는 특별한 이야기",
@@ -15,6 +16,5 @@
   "story_for_parents_feature2_desc": "스스로 이야기의 작가가 되어보는 특별한 경험을 통해 아이들은 책 읽기와 글쓰기에 대한 흥미와 자신감을 갖게 됩니다. 이는 문해력 발달의 튼튼한 기초가 됩니다.",
   "story_cta_title": "나만의 멋진 이야기를 만들 준비가 되었나요?",
   "story_cta_desc": "몇 번만 콕콕 누르면, 세상에 단 하나뿐인 나만의 AI 그림책이 짠! 하고 나타나요.",
-  "story_cta_button": "스토리북 만들기 시작하기"
+  "story_cta_button": "Storybook AI 시작하기"
 }
-

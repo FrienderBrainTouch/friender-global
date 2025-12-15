@@ -74,12 +74,22 @@
             <p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">
               {{ t(service.descKey) }}
             </p>
-            <NuxtLink
-              :to="localePath(service.to)"
+            <a
+              v-if="service.externalUrl"
+              :href="service.externalUrl"
+              target="_blank"
+              rel="noopener noreferrer"
               class="inline-flex items-center justify-center px-6 py-3 border border-friender-primary text-base font-medium text-friender-primary hover:bg-friender-primary hover:text-white transition-all duration-300 mt-auto"
             >
               {{ t('cta_button') }}
-            </NuxtLink>
+            </a>
+            <button
+              v-else
+              disabled
+              class="inline-flex items-center justify-center px-6 py-3 border border-friender-primary text-base font-medium text-friender-primary hover:bg-friender-primary hover:text-white transition-all duration-300 mt-auto opacity-50 cursor-not-allowed"
+            >
+              {{ t('cta_button') }}
+            </button>
           </div>
         </div>
       </div>
@@ -111,8 +121,12 @@
     </div>
 
     <!-- 문의하기 CTA 섹션 -->
-    <div class="w-full bg-gray-50 pt-16 pb-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div
+      class="w-full bg-gray-50 pt-16 pb-16 relative bg-cover bg-center bg-no-repeat"
+      style="background-image: url('/images/main_cta.png')"
+    >
+      <div class="absolute inset-0 bg-white/70"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 class="text-3xl lg:text-4xl font-bold text-friender-darkest mb-6">
           {{ t('contact_cta_title') }}
         </h2>
@@ -154,6 +168,7 @@ const serviceShowcase = [
     titleKey: 'dreamPath_title',
     descKey: 'dreamPath_desc',
     to: '/dreamPath',
+    externalUrl: '', // 외부 URL (추후 설정)
   },
   {
     icon: Target,
@@ -161,6 +176,7 @@ const serviceShowcase = [
     titleKey: 'innoWorks_title',
     descKey: 'innoWorks_desc',
     to: '/innoWorks',
+    externalUrl: '', // 외부 URL (추후 설정)
   },
   {
     icon: BookOpen,
@@ -168,6 +184,7 @@ const serviceShowcase = [
     titleKey: 'story_title',
     descKey: 'story_desc',
     to: '/story',
+    externalUrl: '', // 외부 URL (추후 설정)
   },
 ];
 
