@@ -48,11 +48,20 @@
           <div
             v-for="(service, index) in serviceShowcase"
             :key="index"
-            class="service-showcase-card text-left p-10 transition-all duration-300"
+            class="service-showcase-card text-left p-10 transition-all duration-300 flex flex-col"
           >
-            <div class="mb-6 h-48 bg-gray-100 flex items-center justify-center">
-              <!-- 이미지 영역 - 실제 이미지로 교체 필요 -->
+            <div
+              class="mb-6 h-48 bg-gray-100 flex items-center justify-center overflow-hidden rounded-lg"
+            >
+              <!-- 이미지 영역 -->
+              <img
+                v-if="service.image"
+                :src="service.image"
+                :alt="t(service.titleKey)"
+                class="w-full h-full object-cover"
+              />
               <component
+                v-else
                 :is="service.icon"
                 :size="64"
                 class="text-friender-primary"
@@ -62,12 +71,12 @@
             <h3 class="text-2xl font-bold text-friender-darkest mb-4">
               {{ t(service.titleKey) }}
             </h3>
-            <p class="text-base text-gray-600 leading-relaxed mt-6 mb-6">
+            <p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">
               {{ t(service.descKey) }}
             </p>
             <NuxtLink
               :to="localePath(service.to)"
-              class="inline-flex items-center justify-center px-6 py-3 border border-friender-primary text-base font-medium text-friender-primary hover:bg-friender-primary hover:text-white transition-all duration-300"
+              class="inline-flex items-center justify-center px-6 py-3 border border-friender-primary text-base font-medium text-friender-primary hover:bg-friender-primary hover:text-white transition-all duration-300 mt-auto"
             >
               {{ t('cta_button') }}
             </NuxtLink>
@@ -137,22 +146,25 @@ import {
 const { t } = useI18n();
 const localePath = useLocalePath();
 
-// 서비스 쇼케이스 - Lucide 아이콘 사용
+// 서비스 쇼케이스 - 이미지와 아이콘 사용
 const serviceShowcase = [
   {
     icon: MessageCircle,
+    image: '/images/dream_path.png',
     titleKey: 'dreamPath_title',
     descKey: 'dreamPath_desc',
     to: '/dreamPath',
   },
   {
     icon: Target,
+    image: '/images/inno_works.png',
     titleKey: 'innoWorks_title',
     descKey: 'innoWorks_desc',
     to: '/innoWorks',
   },
   {
     icon: BookOpen,
+    image: '/images/story_ai.png',
     titleKey: 'story_title',
     descKey: 'story_desc',
     to: '/story',
