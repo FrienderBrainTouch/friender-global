@@ -13,12 +13,21 @@
           <p class="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed whitespace-pre-line">
             {{ t('dreamPath_hero_subtitle') }}
           </p>
-          <NuxtLink
-            :to="localePath('/contact')"
-            class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer"
-          >
-            {{ t('dreamPath_hero_button') || t('story_hero_button') }}
-          </NuxtLink>
+          <div class="flex gap-4 flex-wrap">
+            <a
+              :href="dreamPathUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer"
+            >
+              {{ t('dreamPath_hero_button') }}
+            </a>
+            <button
+              class="inline-flex items-center justify-center px-10 py-4 border border-friender-primary text-base font-medium text-friender-primary bg-white hover:bg-friender-primary hover:text-white transition-all duration-300 cursor-pointer"
+            >
+              {{ t('dreamPath_catalog_button') }}
+            </button>
+          </div>
         </div>
 
         <!-- 오른쪽: 이미지 -->
@@ -39,14 +48,12 @@
             :key="index"
             class="bg-white p-8 text-center border border-gray-100 transition-all duration-300 hover:border-friender-primary/30 rounded-2xl"
           >
-            <div
-              class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <component
-                :is="dream.icon"
-                :size="48"
-                class="text-friender-primary"
-                stroke-width="1.5"
+            <div class="w-full h-48 bg-gray-100 rounded-2xl overflow-hidden mb-6">
+              <img
+                v-if="dream.image"
+                :src="dream.image"
+                :alt="t(dream.titleKey)"
+                class="w-full h-full object-cover"
               />
             </div>
             <h3 class="text-xl font-bold text-friender-darkest mb-4">
@@ -65,10 +72,13 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- 왼쪽: 이미지 -->
-          <div class="flex justify-center lg:justify-start order-2 lg:order-1">
-            <div class="w-64 h-64 bg-beige-50 rounded-2xl flex items-center justify-center">
-              <!-- 이미지 영역 -->
-              <Bot :size="96" class="text-friender-primary" stroke-width="1.5" />
+          <div class="flex justify-center order-2 lg:order-1">
+            <div class="w-full rounded-2xl overflow-hidden">
+              <img
+                src="/images/dreampath_4.png"
+                alt="Dream Path for Parents and Teachers"
+                class="w-full h-auto object-cover"
+              />
             </div>
           </div>
 
@@ -142,23 +152,40 @@
 <script setup lang="ts">
 import { useI18n, useLocalePath } from '#imports';
 import { Briefcase, PenTool, MessageCircle, Bot, Users, Sparkles } from 'lucide-vue-next';
+import { computed } from 'vue';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const localePath = useLocalePath();
+
+// 현재 locale에 따라 DreamPath URL 생성
+const dreamPathUrl = computed(() => {
+  const localeMap: Record<string, string> = {
+    ko: 'ko',
+    en: 'en',
+    ja: 'ja',
+    'zh-CN': 'zh-hans',
+    es: 'es',
+  };
+  const mappedLocale = localeMap[locale.value] || 'ko';
+  return `https://multi.dreampathai.kr/${mappedLocale}/`;
+});
 
 const dreamCards = [
   {
     icon: Briefcase,
+    image: '/images/dreampath_1.png',
     titleKey: 'dreamPath_career_experience',
     descKey: 'dreamPath_career_experience_desc',
   },
   {
     icon: PenTool,
+    image: '/images/dreampath_2.png',
     titleKey: 'dreamPath_draw_dream',
     descKey: 'dreamPath_draw_dream_desc',
   },
   {
     icon: MessageCircle,
+    image: '/images/dreampath_3.png',
     titleKey: 'dreamPath_mentor_conversation',
     descKey: 'dreamPath_mentor_conversation_desc',
   },

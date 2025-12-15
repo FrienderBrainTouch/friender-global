@@ -1,7 +1,8 @@
 {
   "story_hero_title": "AI朋友讲述的魔法故事世界，\nAI Storybook",
   "story_hero_subtitle": "与Friender AI Storybook一起，将想象的世界变成精彩的故事。\n我可以成为主角，创造故事，并完成可爱的图画书！",
-  "story_hero_button": "现在就去创造故事吧",
+  "story_hero_button": "开始Storybook AI",
+  "story_catalog_button": "查看电子目录",
   "story_create_button": "现在就去创造故事吧",
   "story_feature1_title": "释放想象力的我的故事",
   "story_feature1_desc": "告诉AI您的有趣想法，比如「会飞的海豚」或「制作饼干的恐龙」。您的AI朋友会将您的想法变成精彩的故事！",
@@ -16,5 +17,6 @@
   "story_book_friendly_desc": "通过自己成为故事作家的特殊经历，孩子们对阅读和写作产生兴趣和信心。这为识字能力的发展奠定了坚实的基础。",
   "story_cta_title": "您准备好创造自己的精彩故事了吗？",
   "story_cta_desc": "只需轻点几下，您独一无二的AI图画书就会「啪」地出现！",
+  "story_cta_button": "开始Storybook AI",
   "story_start_creating_button": "开始创建故事书"
 }

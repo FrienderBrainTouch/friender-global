@@ -1,7 +1,8 @@
 {
   "story_hero_title": "A magical story world told by an AI friend,\nAI Storybook",
   "story_hero_subtitle": "Create wonderful stories in a world of imagination with Friender AI Storybook.\nYou can become the protagonist, create stories, and complete cute picture books!",
-  "story_hero_button": "Go create a story now",
+  "story_hero_button": "Start Storybook AI",
+  "story_catalog_button": "View E-Catalog",
   "story_feature1_title": "My own story that unleashes imagination",
   "story_feature1_desc": "Tell AI your fun ideas, like \"flying dolphins\" or \"cookie-making dinosaurs.\" Your AI friend will turn your ideas into wonderful stories!",
   "story_feature2_title": "A special story told by an AI friend",
@@ -15,5 +16,5 @@
   "story_for_parents_feature2_desc": "Through the special experience of becoming a story writer themselves, children gain interest and confidence in reading and writing. This forms a strong foundation for literacy development.",
   "story_cta_title": "Are you ready to create your own wonderful story?",
   "story_cta_desc": "Just a few taps, and your one-of-a-kind AI picture book will appear with a 'ta-da!'",
-  "story_cta_button": "Start creating storybook"
+  "story_cta_button": "Start Storybook AI"
 }

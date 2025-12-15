@@ -121,8 +121,12 @@
     </div>
 
     <!-- 문의하기 CTA 섹션 -->
-    <div class="w-full bg-gray-50 pt-16 pb-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div
+      class="w-full bg-gray-50 pt-16 pb-16 relative bg-cover bg-center bg-no-repeat"
+      style="background-image: url('/images/main_cta.png')"
+    >
+      <div class="absolute inset-0 bg-white/70"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 class="text-3xl lg:text-4xl font-bold text-friender-darkest mb-6">
           {{ t('contact_cta_title') }}
         </h2>

@@ -1,7 +1,8 @@
 {
   "story_hero_title": "Un mundo mágico de historias contado por un amigo de IA,\nAI Storybook",
   "story_hero_subtitle": "Con Friender AI Storybook, crea historias maravillosas en un mundo de imaginación.\nPuedes convertirte en el protagonista, crear historias y completar libros ilustrados lindos!",
-  "story_hero_button": "Ve a crear una historia ahora",
+  "story_hero_button": "Comenzar Storybook AI",
+  "story_catalog_button": "Ver catálogo electrónico",
   "story_create_button": "Ve a crear una historia ahora",
   "story_feature1_title": "Mi propia historia que libera la imaginación",
   "story_feature1_desc": "Cuéntale a la IA tus ideas divertidas, como \"delfines voladores\" o \"dinosaurios que hacen galletas\". ¡Tu amigo de IA convertirá tus ideas en historias maravillosas!",
@@ -16,5 +17,6 @@
   "story_book_friendly_desc": "A través de la experiencia especial de convertirse en escritor de historias, los niños obtienen interés y confianza en la lectura y escritura. Esto forma una base sólida para el desarrollo de la alfabetización.",
   "story_cta_title": "¿Estás listo para crear tu propia historia maravillosa?",
   "story_cta_desc": "Con solo unos toques, tu libro ilustrado de IA único aparecerá con un '¡ta-da!'",
+  "story_cta_button": "Comenzar Storybook AI",
   "story_start_creating_button": "Comenzar a crear libro de cuentos"
 }

@@ -13,12 +13,21 @@
           <p class="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed whitespace-pre-line">
             {{ t('innoWorks_hero_subtitle') }}
           </p>
-          <NuxtLink
-            :to="localePath('/contact')"
-            class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer"
-          >
-            {{ t('innoWorks_hero_button') || t('story_hero_button') }}
-          </NuxtLink>
+          <div class="flex gap-4 flex-wrap">
+            <a
+              :href="innoWorksUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer"
+            >
+              {{ t('innoWorks_hero_button') }}
+            </a>
+            <button
+              class="inline-flex items-center justify-center px-10 py-4 border border-friender-primary text-base font-medium text-friender-primary bg-white hover:bg-friender-primary hover:text-white transition-all duration-300 cursor-pointer"
+            >
+              {{ t('innoWorks_catalog_button') }}
+            </button>
+          </div>
         </div>
 
         <!-- 오른쪽: 이미지 -->
@@ -34,54 +43,24 @@
     <div class="bg-white py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- 피처 1 -->
           <div
+            v-for="(feature, index) in innoWorksFeatures"
+            :key="index"
             class="bg-white p-8 text-center border border-gray-100 transition-all duration-300 hover:border-friender-primary/30 rounded-2xl"
           >
-            <div
-              class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <Palette :size="48" class="text-friender-primary" stroke-width="1.5" />
+            <div class="w-full h-48 bg-gray-100 rounded-2xl overflow-hidden mb-6">
+              <img
+                v-if="feature.image"
+                :src="feature.image"
+                :alt="t(feature.titleKey)"
+                class="w-full h-full object-cover"
+              />
             </div>
             <h3 class="text-xl font-bold text-friender-darkest mb-4">
-              {{ t('innoWorks_ai_tools_title') }}
+              {{ t(feature.titleKey) }}
             </h3>
             <p class="text-base text-gray-600 leading-relaxed">
-              {{ t('innoWorks_ai_tools_desc') }}
-            </p>
-          </div>
-
-          <!-- 피처 2 -->
-          <div
-            class="bg-white p-8 text-center border border-gray-100 transition-all duration-300 hover:border-friender-primary/30 rounded-2xl"
-          >
-            <div
-              class="w-24 h-24 bg-beige-50 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <Lightbulb :size="48" class="text-friender-primary" stroke-width="1.5" />
-            </div>
-            <h3 class="text-xl font-bold text-friender-darkest mb-4">
-              {{ t('innoWorks_inventor_title') }}
-            </h3>
-            <p class="text-base text-gray-600 leading-relaxed">
-              {{ t('innoWorks_inventor_desc') }}
-            </p>
-          </div>
-
-          <!-- 피처 3 -->
-          <div
-            class="bg-white p-8 text-center border border-gray-100 transition-all duration-300 hover:border-friender-primary/30 rounded-2xl"
-          >
-            <div
-              class="w-24 h-24 bg-pink-50 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <Video :size="48" class="text-friender-primary" stroke-width="1.5" />
-            </div>
-            <h3 class="text-xl font-bold text-friender-darkest mb-4">
-              {{ t('innoWorks_presentation_title') }}
-            </h3>
-            <p class="text-base text-gray-600 leading-relaxed">
-              {{ t('innoWorks_presentation_desc') }}
+              {{ t(feature.descKey) }}
             </p>
           </div>
         </div>
@@ -93,10 +72,13 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- 왼쪽: 이미지 -->
-          <div class="flex justify-center lg:justify-start order-2 lg:order-1">
-            <div class="w-64 h-64 bg-beige-50 rounded-2xl flex items-center justify-center">
-              <!-- 이미지 영역 -->
-              <div class="w-48 h-48 bg-gray-200 rounded-full"></div>
+          <div class="flex justify-center order-2 lg:order-1">
+            <div class="w-full rounded-2xl overflow-hidden">
+              <img
+                src="/images/innoworks_4.png"
+                alt="Inno Works for Parents and Teachers"
+                class="w-full h-auto object-cover"
+              />
             </div>
           </div>
 
@@ -168,7 +150,42 @@
 <script setup lang="ts">
 import { useI18n, useLocalePath } from '#imports';
 import { Palette, Lightbulb, Video, Sparkles, CheckCircle2 } from 'lucide-vue-next';
+import { computed } from 'vue';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const localePath = useLocalePath();
+
+// 현재 locale에 따라 InnoWorks URL 생성
+const innoWorksUrl = computed(() => {
+  const localeMap: Record<string, string> = {
+    ko: 'ko',
+    en: 'en',
+    ja: 'ja',
+    'zh-CN': 'zh-hans',
+    es: 'es',
+  };
+  const mappedLocale = localeMap[locale.value] || 'ko';
+  return `https://multi.innoworks.kr/${mappedLocale}/`;
+});
+
+const innoWorksFeatures = [
+  {
+    icon: Palette,
+    image: '/images/innoworks_1.png',
+    titleKey: 'innoWorks_ai_tools_title',
+    descKey: 'innoWorks_ai_tools_desc',
+  },
+  {
+    icon: Lightbulb,
+    image: '/images/innoworks_2.png',
+    titleKey: 'innoWorks_inventor_title',
+    descKey: 'innoWorks_inventor_desc',
+  },
+  {
+    icon: Video,
+    image: '/images/innoworks_3.png',
+    titleKey: 'innoWorks_presentation_title',
+    descKey: 'innoWorks_presentation_desc',
+  },
+];
 </script>

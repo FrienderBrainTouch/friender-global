@@ -1,7 +1,8 @@
 {
   "story_hero_title": "AIフレンドが語る魔法のような物語の世界、\nAI Storybook",
   "story_hero_subtitle": "フレンダーAIストーリーブックと一緒に想像の世界を素晴らしい物語にしましょう。\n私が主人公になって物語を作り、可愛い絵本も完成させることができます！",
-  "story_hero_button": "今すぐ物語を作りに行こう",
+  "story_hero_button": "Storybook AIを始める",
+  "story_catalog_button": "E-カタログを見る",
   "story_create_button": "今すぐ物語を作りに行こう",
   "story_feature1_title": "想像力を広げる私だけの物語",
   "story_feature1_desc": "「空を飛ぶイルカ」や「クッキーを作る恐竜」のように、面白い考えをAIに教えてください。AIフレンドがあなたの考えを素晴らしい物語に変えてくれます！",
@@ -16,5 +17,6 @@
   "story_book_friendly_desc": "自分が物語の作家になる特別な経験を通じて、子供たちは読書と作文に対する興味と自信を持つようになります。これは識字能力発達の強固な基盤となります。",
   "story_cta_title": "あなただけの素晴らしい物語を作る準備はできましたか？",
   "story_cta_desc": "数回タップするだけで、世界に一つだけのAI絵本が「タダー！」と現れます。",
+  "story_cta_button": "Storybook AIを始める",
   "story_start_creating_button": "ストーリーブック作りを始める"
 }

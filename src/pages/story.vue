@@ -13,12 +13,21 @@
           <p class="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed whitespace-pre-line">
             {{ t('story_hero_subtitle') }}
           </p>
-          <NuxtLink
-            :to="localePath('/contact')"
-            class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer"
-          >
-            {{ t('story_hero_button') }}
-          </NuxtLink>
+          <div class="flex gap-4 flex-wrap">
+            <a
+              :href="storyAiUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer"
+            >
+              {{ t('story_hero_button') }}
+            </a>
+            <button
+              class="inline-flex items-center justify-center px-10 py-4 border border-friender-primary text-base font-medium text-friender-primary bg-white hover:bg-friender-primary hover:text-white transition-all duration-300 cursor-pointer"
+            >
+              {{ t('story_catalog_button') }}
+            </button>
+          </div>
         </div>
 
         <!-- 오른쪽: 이미지 -->
@@ -170,7 +179,21 @@
 <script setup lang="ts">
 import { useI18n, useLocalePath } from '#imports';
 import { BookOpen, Lightbulb, Sparkles } from 'lucide-vue-next';
+import { computed } from 'vue';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const localePath = useLocalePath();
+
+// 현재 locale에 따라 Story AI URL 생성
+const storyAiUrl = computed(() => {
+  const localeMap: Record<string, string> = {
+    ko: 'ko',
+    en: 'en',
+    ja: 'ja',
+    'zh-CN': 'zh-hans',
+    es: 'es',
+  };
+  const mappedLocale = localeMap[locale.value] || 'ko';
+  return `https://multi.storyai.kr/${mappedLocale}/`;
+});
 </script>
