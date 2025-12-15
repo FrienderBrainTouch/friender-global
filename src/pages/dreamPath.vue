@@ -33,7 +33,11 @@
         <!-- 오른쪽: 이미지 -->
         <div class="flex justify-center lg:justify-end">
           <div class="w-full h-96 bg-gray-100 rounded-2xl overflow-hidden">
-            <img src="/images/dream_path.png" alt="Dream Path" class="w-full h-full object-cover" />
+            <img
+              src="/images/dream_path.webp"
+              alt="Dream Path"
+              class="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -75,7 +79,7 @@
           <div class="flex justify-center order-2 lg:order-1">
             <div class="w-full rounded-2xl overflow-hidden">
               <img
-                src="/images/dreampath_4.png"
+                src="/images/dreampath_4.webp"
                 alt="Dream Path for Parents and Teachers"
                 class="w-full h-auto object-cover"
               />
@@ -175,19 +179,19 @@ const dreamPathUrl = computed(() => {
 const dreamCards = [
   {
     icon: Briefcase,
-    image: '/images/dreampath_1.png',
+    image: '/images/dreampath_1.webp',
     titleKey: 'dreamPath_career_experience',
     descKey: 'dreamPath_career_experience_desc',
   },
   {
     icon: PenTool,
-    image: '/images/dreampath_2.png',
+    image: '/images/dreampath_2.webp',
     titleKey: 'dreamPath_draw_dream',
     descKey: 'dreamPath_draw_dream_desc',
   },
   {
     icon: MessageCircle,
-    image: '/images/dreampath_3.png',
+    image: '/images/dreampath_3.webp',
     titleKey: 'dreamPath_mentor_conversation',
     descKey: 'dreamPath_mentor_conversation_desc',
   },

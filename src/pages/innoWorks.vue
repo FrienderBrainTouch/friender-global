@@ -33,7 +33,11 @@
         <!-- 오른쪽: 이미지 -->
         <div class="flex justify-center lg:justify-end">
           <div class="w-full h-96 bg-gray-100 rounded-2xl overflow-hidden">
-            <img src="/images/inno_works.png" alt="Inno Works" class="w-full h-full object-cover" />
+            <img
+              src="/images/inno_works.webp"
+              alt="Inno Works"
+              class="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -75,7 +79,7 @@
           <div class="flex justify-center order-2 lg:order-1">
             <div class="w-full rounded-2xl overflow-hidden">
               <img
-                src="/images/innoworks_4.png"
+                src="/images/innoworks_4.webp"
                 alt="Inno Works for Parents and Teachers"
                 class="w-full h-auto object-cover"
               />
@@ -173,19 +177,19 @@ const innoWorksUrl = computed(() => {
 const innoWorksFeatures = [
   {
     icon: Palette,
-    image: '/images/innoworks_1.png',
+    image: '/images/innoworks_1.webp',
     titleKey: 'innoWorks_ai_tools_title',
     descKey: 'innoWorks_ai_tools_desc',
   },
   {
     icon: Lightbulb,
-    image: '/images/innoworks_2.png',
+    image: '/images/innoworks_2.webp',
     titleKey: 'innoWorks_inventor_title',
     descKey: 'innoWorks_inventor_desc',
   },
   {
     icon: Video,
-    image: '/images/innoworks_3.png',
+    image: '/images/innoworks_3.webp',
     titleKey: 'innoWorks_presentation_title',
     descKey: 'innoWorks_presentation_desc',
   },

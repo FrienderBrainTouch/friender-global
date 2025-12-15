@@ -30,7 +30,7 @@
         <!-- 오른쪽: 이미지 섹션 (정확히 50%, 패딩 없음) -->
         <div class="relative w-full h-full">
           <img
-            src="/images/main.png"
+            src="/images/main.webp"
             alt="Friender 서비스 화면"
             class="w-full h-full object-cover"
           />
@@ -123,7 +123,7 @@
     <!-- 문의하기 CTA 섹션 -->
     <div
       class="w-full bg-gray-50 pt-16 pb-16 relative bg-cover bg-center bg-no-repeat"
-      style="background-image: url('/images/main_cta.png')"
+      style="background-image: url('/images/main_cta.webp')"
     >
       <div class="absolute inset-0 bg-white/70"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -164,7 +164,7 @@ const localePath = useLocalePath();
 const serviceShowcase = [
   {
     icon: MessageCircle,
-    image: '/images/dream_path.png',
+    image: '/images/dream_path.webp',
     titleKey: 'dreamPath_title',
     descKey: 'dreamPath_desc',
     to: '/dreamPath',
@@ -172,7 +172,7 @@ const serviceShowcase = [
   },
   {
     icon: Target,
-    image: '/images/inno_works.png',
+    image: '/images/inno_works.webp',
     titleKey: 'innoWorks_title',
     descKey: 'innoWorks_desc',
     to: '/innoWorks',
@@ -180,7 +180,7 @@ const serviceShowcase = [
   },
   {
     icon: BookOpen,
-    image: '/images/story_ai.png',
+    image: '/images/story_ai.webp',
     titleKey: 'story_title',
     descKey: 'story_desc',
     to: '/story',
