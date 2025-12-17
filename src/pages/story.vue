@@ -22,11 +22,14 @@
             >
               {{ t('story_hero_button') }}
             </a>
-            <button
+            <a
+              :href="ecatalogUrl"
+              target="_blank"
+              rel="noopener noreferrer"
               class="inline-flex items-center justify-center px-10 py-4 border border-friender-primary text-base font-medium text-friender-primary bg-white hover:bg-friender-primary hover:text-white transition-all duration-300 cursor-pointer"
             >
-              {{ t('story_catalog_button') }}
-            </button>
+              {{ t('ecatalog_button') }}
+            </a>
           </div>
         </div>
 
@@ -172,6 +175,11 @@ const storyAiUrl = computed(() => {
   };
   const mappedLocale = localeMap[locale.value] || 'ko';
   return `https://multi.storyai.kr/${mappedLocale}/`;
+});
+
+const ecatalogUrl = computed(() => {
+  const l = locale.value === 'zh-CN' ? 'zh' : locale.value;
+  return `https://friender-catalog.netlify.app/story/${l}`;
 });
 
 const storyFeatures = [

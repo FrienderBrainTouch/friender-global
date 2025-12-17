@@ -23,6 +23,14 @@
               >
                 {{ t('cta_button') }}
               </button>
+              <a
+                :href="getECatalogUrl()"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center px-10 py-4 border border-friender-primary text-base font-medium text-friender-primary hover:bg-friender-primary hover:text-white transition-all duration-300 cursor-pointer"
+              >
+                {{ t('ecatalog_button') }}
+              </a>
             </div>
           </div>
         </div>
@@ -75,21 +83,13 @@
               {{ t(service.descKey) }}
             </p>
             <a
-              v-if="service.externalUrl"
-              :href="service.externalUrl"
+              :href="getECatalogUrl(service.catalogKey)"
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center px-6 py-3 border border-friender-primary text-base font-medium text-friender-primary hover:bg-friender-primary hover:text-white transition-all duration-300 mt-auto"
             >
-              {{ t('cta_button') }}
+              {{ t('ecatalog_button') }}
             </a>
-            <button
-              v-else
-              disabled
-              class="inline-flex items-center justify-center px-6 py-3 border border-friender-primary text-base font-medium text-friender-primary hover:bg-friender-primary hover:text-white transition-all duration-300 mt-auto opacity-50 cursor-not-allowed"
-            >
-              {{ t('cta_button') }}
-            </button>
           </div>
         </div>
       </div>
@@ -157,8 +157,18 @@ import {
   Sprout,
 } from 'lucide-vue-next';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const localePath = useLocalePath();
+
+const getECatalogUrl = (programOrType = '') => {
+  const l = locale.value === 'zh-CN' ? 'zh' : locale.value;
+  const base = 'https://friender-catalog.netlify.app';
+
+  if (!programOrType) {
+    return l === 'ko' ? `${base}/` : `${base}/${l}`;
+  }
+  return `${base}/${programOrType}/${l}`;
+};
 
 // 서비스 쇼케이스 - 이미지와 아이콘 사용
 const serviceShowcase = [
@@ -168,7 +178,7 @@ const serviceShowcase = [
     titleKey: 'dreamPath_title',
     descKey: 'dreamPath_desc',
     to: '/dreamPath',
-    externalUrl: '', // 외부 URL (추후 설정)
+    catalogKey: 'dreampath',
   },
   {
     icon: Target,
@@ -176,7 +186,7 @@ const serviceShowcase = [
     titleKey: 'innoWorks_title',
     descKey: 'innoWorks_desc',
     to: '/innoWorks',
-    externalUrl: '', // 외부 URL (추후 설정)
+    catalogKey: 'innoworks',
   },
   {
     icon: BookOpen,
@@ -184,7 +194,7 @@ const serviceShowcase = [
     titleKey: 'story_title',
     descKey: 'story_desc',
     to: '/story',
-    externalUrl: '', // 외부 URL (추후 설정)
+    catalogKey: 'story',
   },
 ];
 
