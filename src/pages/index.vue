@@ -7,11 +7,13 @@
         <div class="w-full flex items-center px-4 sm:px-6 lg:px-8 xl:px-12">
           <div class="text-left w-full max-w-2xl">
             <!-- 메인 타이틀: AI 친구와 함께 떠나는 신나는 배움 여행! -->
-            <h1 class="text-4xl lg:text-6xl font-bold text-friender-primary mb-8 leading-relaxed">
+            <h1
+              class="text-4xl lg:text-6xl font-bold text-friender-primary mb-8 leading-relaxed break-words"
+            >
               {{ t('hero_title') }}
             </h1>
             <!-- 부제목 -->
-            <p class="text-lg lg:text-xl text-gray-700 mb-10 leading-relaxed">
+            <p class="text-lg lg:text-xl text-gray-700 mb-10 leading-relaxed break-words">
               {{ t('hero_subtitle') }}
             </p>
 
@@ -19,7 +21,7 @@
             <div class="flex flex-col sm:flex-row gap-4">
               <button
                 @click="scrollToPrograms"
-                class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer"
+                class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer break-words"
               >
                 {{ t('cta_button') }}
               </button>
@@ -27,7 +29,7 @@
                 :href="getECatalogUrl()"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center justify-center px-10 py-4 border border-friender-primary text-base font-medium text-friender-primary hover:bg-friender-primary hover:text-white transition-all duration-300 cursor-pointer"
+                class="inline-flex items-center justify-center px-10 py-4 border border-friender-primary text-base font-medium text-friender-primary hover:bg-friender-primary hover:text-white transition-all duration-300 cursor-pointer break-words"
               >
                 {{ t('ecatalog_button') }}
               </a>
@@ -49,14 +51,16 @@
     <!-- 서비스 쇼케이스: Dream Path, Inno Works, AI Storybook -->
     <div id="programs" class="w-full bg-gray-50 pt-16 pb-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl lg:text-4xl font-bold text-friender-darkest text-center mb-12">
+        <h2
+          class="text-3xl lg:text-4xl font-bold text-friender-darkest text-center mb-12 break-words px-4"
+        >
           {{ t('what_can_you_do_title') }}
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div
             v-for="(service, index) in serviceShowcase"
             :key="index"
-            class="service-showcase-card text-left p-10 transition-all duration-300 flex flex-col"
+            class="service-showcase-card text-left p-10 transition-all duration-300 flex flex-col overflow-hidden"
           >
             <div
               class="mb-6 h-48 bg-gray-100 flex items-center justify-center overflow-hidden rounded-lg"
@@ -76,17 +80,17 @@
                 stroke-width="1.5"
               />
             </div>
-            <h3 class="text-2xl font-bold text-friender-darkest mb-4">
+            <h3 class="text-2xl font-bold text-friender-darkest mb-4 break-words">
               {{ t(service.titleKey) }}
             </h3>
-            <p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow">
+            <p class="text-base text-gray-600 leading-relaxed mb-6 flex-grow break-words">
               {{ t(service.descKey) }}
             </p>
             <a
               :href="getECatalogUrl(service.catalogKey)"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center justify-center px-6 py-3 border border-friender-primary text-base font-medium text-friender-primary hover:bg-friender-primary hover:text-white transition-all duration-300 mt-auto"
+              class="inline-flex items-center justify-center px-6 py-3 border border-friender-primary text-base font-medium text-friender-primary hover:bg-friender-primary hover:text-white transition-all duration-300 mt-auto break-words"
             >
               {{ t('ecatalog_button') }}
             </a>
@@ -98,21 +102,23 @@
     <!-- 가치 기둥 섹션: 믿고 맡길 수 있는 우리 아이 첫 AI 친구 -->
     <div class="w-full bg-white py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl lg:text-4xl font-bold text-friender-darkest text-center mb-12">
+        <h2
+          class="text-3xl lg:text-4xl font-bold text-friender-darkest text-center mb-12 break-words px-4"
+        >
           {{ t('trust_section_title') }}
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
           <div
             v-for="(feature, index) in features"
             :key="index"
-            class="bg-white p-4 py-8 text-center border border-gray-100 rounded-2xl min-w-[140px]"
+            class="bg-white p-4 py-8 text-center border border-gray-100 rounded-2xl overflow-hidden"
           >
             <div
               class="w-14 h-14 bg-friender-primary rounded-full flex items-center justify-center mx-auto mb-4"
             >
               <component :is="feature.icon" :size="28" class="text-white" stroke-width="2" />
             </div>
-            <h3 class="text-base font-bold text-friender-darkest leading-tight whitespace-nowrap">
+            <h3 class="text-base font-bold text-friender-darkest leading-tight break-words px-2">
               {{ t(feature.titleKey) }}
             </h3>
           </div>
@@ -127,15 +133,15 @@
     >
       <div class="absolute inset-0 bg-white/70"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <h2 class="text-3xl lg:text-4xl font-bold text-friender-darkest mb-6">
+        <h2 class="text-3xl lg:text-4xl font-bold text-friender-darkest mb-6 break-words px-4">
           {{ t('contact_cta_title') }}
         </h2>
-        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed break-words px-4">
           {{ t('contact_cta_desc') }}
         </p>
         <NuxtLink
           :to="localePath('/contact')"
-          class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer"
+          class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-base font-medium text-white bg-friender-primary hover:bg-friender-dark transition-all duration-300 cursor-pointer break-words"
         >
           {{ t('contact_cta_button') }}
         </NuxtLink>
