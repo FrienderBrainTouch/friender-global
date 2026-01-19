@@ -171,7 +171,7 @@ const getECatalogUrl = (programOrType = '') => {
   const base = 'https://friender-catalog.netlify.app';
 
   if (!programOrType) {
-    return l === 'ko' ? `${base}/` : `${base}/${l}`;
+    return l === 'en' ? `${base}/` : `${base}/${l}`;
   }
   return `${base}/${programOrType}/${l}`;
 };

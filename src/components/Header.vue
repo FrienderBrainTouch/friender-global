@@ -149,7 +149,7 @@ const availableLocales = computed(() =>
     // 로케일 설정에서 flag 가져오기
     const flag = (locale as any).flag || '🌐';
     // 현재 언어로 번역된 언어 이름 사용
-    const langKey = `lang_${code}` as 'lang_ko' | 'lang_en' | 'lang_ja' | 'lang_zh-CN' | 'lang_es';
+    const langKey = `lang_${code}` as 'lang_en' | 'lang_ja' | 'lang_zh-CN' | 'lang_es';
     const name = t(langKey) || (locale as any).name || code;
     return {
       code,
@@ -168,7 +168,7 @@ const currentLocaleData = computed(() => {
 
 const selectLocale = (code: string) => {
   if (code !== locale.value) {
-    setLocale(code as 'ko' | 'en' | 'ja' | 'zh-CN' | 'es');
+    setLocale(code as 'en' | 'ja' | 'zh-CN' | 'es');
   }
   languageDropdownOpen.value = false;
   mobileMenuOpen.value = false;

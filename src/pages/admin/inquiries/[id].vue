@@ -163,5 +163,5 @@ const handleLogout = async () => {
   router.push(localePath('/admin'));
 };
 
-const formatDate = (ts: string) => new Date(ts).toLocaleString('ko-KR');
+const formatDate = (ts: string) => new Date(ts).toLocaleString('en-US');
 </script>

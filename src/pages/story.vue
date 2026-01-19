@@ -171,13 +171,12 @@ const localePath = useLocalePath();
 // 현재 locale에 따라 Story AI URL 생성
 const storyAiUrl = computed(() => {
   const localeMap: Record<string, string> = {
-    ko: 'ko',
     en: 'en',
     ja: 'ja',
     'zh-CN': 'zh-hans',
     es: 'es',
   };
-  const mappedLocale = localeMap[locale.value] || 'ko';
+  const mappedLocale = localeMap[locale.value] || 'en';
   return `https://multi.storyai.kr/${mappedLocale}/`;
 });
 

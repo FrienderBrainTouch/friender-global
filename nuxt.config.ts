@@ -14,20 +14,6 @@ export default defineNuxtConfig({
   i18n: {
     locales: [
       {
-        code: 'ko',
-        iso: 'ko-KR',
-        name: '한국어',
-        flag: '🇰🇷',
-        files: [
-          'ko/common.json',
-          'ko/home.json',
-          'ko/dreamPath.json',
-          'ko/innoWorks.json',
-          'ko/story.json',
-          'ko/contact.json',
-        ],
-      },
-      {
         code: 'en',
         iso: 'en-US',
         name: 'English',
@@ -84,7 +70,7 @@ export default defineNuxtConfig({
         ],
       },
     ],
-    defaultLocale: 'ko',
+    defaultLocale: 'en',
     strategy: 'prefix',
     langDir: '../i18n',
     detectBrowserLanguage: {
@@ -92,7 +78,7 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
       alwaysRedirect: true,
-      fallbackLocale: 'ko',
+      fallbackLocale: 'en',
     },
     vueI18n: '../i18n.config.ts',
   },
